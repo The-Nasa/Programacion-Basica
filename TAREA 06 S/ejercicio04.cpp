@@ -25,8 +25,9 @@ int main()
             cout << "Ingrese sus filas " << i << " y tus columnas " << j << " es: ";
             cin >> m[i][j];
         }
-        cout << endl;
+       
     }
+      cout << endl;
     for (int i = 0; i < row; ++i)
     {
         for (int j = 0; j < column; ++j)

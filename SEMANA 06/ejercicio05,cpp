@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int d=distancia(int v,int t){
+    int r= v*t
+    return r;
+}
+void llenar (){
+    int r ;
+    cout <<"ingresa un numero";
+    cin>>r;
+    returm r;
+}
+void mostrar(int v, int t, int d){
+    cout <<" la distancia es "<<v<<"*"<<t<<"="<<d;
+}
+
+int main() {
+    int v, t,d ;
+    v=llenar()
+    v=llenar()
+    d=distancia(v,t)
+    mostrar(v,t,d)
+    
+  return 0;
+}

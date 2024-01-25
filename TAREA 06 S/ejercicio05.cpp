@@ -1,4 +1,4 @@
-//producto de vectores
+// producto de vectores
 #include <iostream>
 using namespace std;
 int main()
@@ -9,18 +9,18 @@ int main()
     int m[row][column];
     int n[filas][columnas];
 
-    cout <<"Ingrese los valores da la primara matriz"<<endl;
+    cout << "Ingrese los valores da la primara matriz" << endl;
     for (int i = 0; i < row; ++i)
     {
         for (int j = 0; j < column; ++j)
         {
-            
+
             cout << "Ingrese [" << i << "] [" << j << "] :";
             cin >> m[i][j];
         }
     }
-    cout << " "<<endl;
-    cout <<"Ingrese los valores da la segnda matriz"<<endl;
+    cout << " " << endl;
+    cout << "Ingrese los valores da la segnda matriz" << endl;
     for (int i = 0; i < filas; ++i)
     {
         for (int j = 0; j < columnas; ++j)
@@ -28,9 +28,8 @@ int main()
             cout << "Ingrese [" << i << "] [" << j << "] :";
             cin >> n[i][j];
         }
-        
     }
-    cout << " "<<endl;
+    cout << " " << endl;
     int resultado[row][columnas] = {0};
     for (int i = 0; i < row; ++i)
     {
@@ -64,8 +63,8 @@ int main()
     }
 
     cout << endl;
-    cout <<"resultado del producto de la matris"<<endl;
-    
+    cout << "resultado del producto de la matris" << endl;
+
     for (int i = 0; i < row; ++i)
     {
         for (int j = 0; j < column; ++j)
@@ -76,5 +75,4 @@ int main()
     }
 
     return 0;
-    
- }
+}
