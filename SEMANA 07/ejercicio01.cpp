@@ -6,38 +6,38 @@ struct libros
 {
     string titulo;
     string autor;
-    int publicacion;
+    int fecha;
 };
 int main()
 {
     int n;
-    cout << "ingrese el numero de libros: ";
+    cout << "ingrese el numero de libros ";
     cin >> n;
     cin.ignore();
     vector<libros> libro(n);
 
     for (int i = 0; i < n; i++)
     {
-        cout << "ingrese el titulo del libro: ";
+        cout << "ingrese el nombre del libro: ";
         getline(cin, libro[i].titulo);
 
         cout << "ingrese el nombre del autor: ";
         getline(cin, libro[i].autor);
 
         cout << "ingrese la fecha de publicacion: ";
-        cin >> libro[i].publicacion;
+        cin >> libro[i].fecha;
         cin.ignore();
-        cout << "\n";
+     
     }
-    system("cls");
-    cout << "Los libros son : " << endl;
+
+    cout << "los libros son: " << endl;
     for (int i = 0; i < n; i++)
     {
         cout << "titulo del libro: " << libro[i].titulo << endl;
 
-        cout << "El autor es:  " << libro[i].autor << endl;
+        cout << "autor: " << libro[i].autor << endl;
 
-        cout << "Fecha de publicacion: " << libro[i].publicacion << endl;
+        cout << "publicado: " << libro[i].fecha << endl;
 
         cout << "\n";
     }

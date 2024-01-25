@@ -1,31 +1,31 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
+
 using namespace std;
-int main()
-{
-    vector<char> carateres;
 
-    while (true)
-    {
-        char caracter;
+int main() {
+   
+    vector<char> caracteres;
 
-        cout << "Ingrese la f para terminar.\n";
-        cout << "Ingrese sus caracteres: ";
-        cin >> caracter;
-        if (caracter == 'f')
-            break;
 
-        carateres.push_back(caracter);
+    string oracion;
+    cout << "Ingresa una oracion: ";
+    getline(cin, oracion);  
+
+    for (char c : oracion) {
+        caracteres.push_back(c);
     }
-    char resultado;
 
-    for (char &caracter : carateres)
-    {
-        resultado += caracter + ' ';
-    }
-    unsigned int transfomar = static_cast<int>(resultado);
+   
+    char caracter;
+    cout << "Ingresa un caracter para contar: ";
+    cin >> caracter;
 
-    cout << "La suma de los carateres son: " << transfomar << endl;
+ 
+    int contador = count(caracteres.begin(), caracteres.end(), caracter);
+
+    cout << "El caracter '" << caracter << "' aparece " << contador << " veces en la oracion." << endl;
 
     return 0;
 }

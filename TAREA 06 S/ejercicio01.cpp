@@ -1,27 +1,29 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
+#include<algorithm>
 using namespace std;
-
 int main()
 {
-    vector <int> numeros = {0};
-    cout << "Ingrese sus numeros (para terminar ponga un numero negativo): ";
-    int valor;
-    while(true)
-    {	
-      cin >> valor;
-      if ( valor  < 0)
-      	break;
-       
-      numeros.push_back(valor);
-    }
-    
-    sort(numeros.begin(),numeros.end());
-    for (size_t i = 0; i < numeros.size(); i++)
+    vector<double> numeros;
+    double valor = 0;
+    int total;
+    cout << "Ingrese la cantidad de valores: ";
+    cin >> total;
+    for (int i = 0; i < total ; i++)
     {
-    	cout << numeros[i] << " ";
-    }   
+        cout << "Ingrese los valores: ";
+        cin >> valor;
+        if (valor == 0)
+            break;
+        numeros.push_back(valor);
+    }
+    sort(numeros.begin(), numeros.end());
+
+    for (int i = 0; i < numeros.size(); i++)
+    {
+
+        cout << numeros[i] << " ";
+    }
+
     return 0;
 }
-    
