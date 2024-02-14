@@ -1,45 +1,36 @@
 #include <iostream>
-#include <vector>
-#include <stdlib.h>
+
 using namespace std;
-struct libros
+
+int area(int b, int l)
 {
-    string titulo;
-    string autor;
-    int fecha;
-};
+    return b * l;
+}
+int perimetro(int b, int l)
+{
+    return b + b + l + l;
+}
+void llenar(int &b, int &l)
+{
+    cout << "ingrese la base ";
+    cin >> b;
+    cout << "ingrese la altura";
+    cin >> l;
+}
+void mostrar(int a, int p)
+{
+    cout << "el area es: " << a<<endl;
+    cout << "el perimetro: " << p;
+}
+
 int main()
 {
-    int n;
-    cout << "ingrese el numero de libros ";
-    cin >> n;
-    cin.ignore();
-    vector<libros> libro(n);
+    int b, l;
+    llenar(b, l);
+    int a = area(b, l);
+    int p = perimetro(b, l);
 
-    for (int i = 0; i < n; i++)
-    {
-        cout << "ingrese el nombre del libro: ";
-        getline(cin, libro[i].titulo);
+    mostrar(a, p);
 
-        cout << "ingrese el nombre del autor: ";
-        getline(cin, libro[i].autor);
-
-        cout << "ingrese la fecha de publicacion: ";
-        cin >> libro[i].fecha;
-        cin.ignore();
-     
-    }
-
-    cout << "los libros son: " << endl;
-    for (int i = 0; i < n; i++)
-    {
-        cout << "titulo del libro: " << libro[i].titulo << endl;
-
-        cout << "autor: " << libro[i].autor << endl;
-
-        cout << "publicado: " << libro[i].fecha << endl;
-
-        cout << "\n";
-    }
     return 0;
 }

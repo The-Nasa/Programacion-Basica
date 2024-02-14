@@ -26,11 +26,11 @@ int main()
             k++;
         i++;
     }
-    int mult=i*j*k;
-    cout << "i * j * k ="<<mult<<endl;
-    cout << "i="<<i<<endl ;
-    cout << "j="<<j<<endl ;
-    cout << "k="<<k<<endl ;
+    int mult = i * j * k;
+    cout << "i * j * k =" << mult << endl;
+    cout << "i=" << i << endl;
+    cout << "j=" << j << endl;
+    cout << "k=" << k << endl;
 
     return 0;
 }

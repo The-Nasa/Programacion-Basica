@@ -1,0 +1,13 @@
+#include <iostream>
+#include <vector>
+#include <stdlib.h>
+using namespace std;
+
+int main()
+{
+    int a = 1, b = 2;
+     int c = a | b;
+    int d = c & a;
+    int e = d ^ 0;
+    cout << e << d << c;
+}
