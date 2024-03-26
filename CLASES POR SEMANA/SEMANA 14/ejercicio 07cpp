@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+using namespace std;
+class Persona {
+    private:
+    string name ;
+    int edad ;
+    p
+ };
+
+
+
+
+int main (){
+
+
+
+    return 0;
+}
