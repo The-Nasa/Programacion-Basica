@@ -2,16 +2,21 @@
 #include <iostream>
 #include <string>
 
-int main() {
-    std::ifstream archivo("ejemplo.txt"); // Abre el archivo "ejemplo.txt" para lectura
-    
-    if (archivo.is_open()) {
+int main()
+{
+    std::ifstream archivo("ejemplo.txt" : ios::in || ios::app); // Abre el archivo "ejemplo.txt" para lectura
+
+    if (archivo.is_open())
+    {
         std::string linea;
-        while (getline(archivo, linea)) { // Lee el archivo línea por línea
+        while (getline(archivo, linea))
+        {                               // Lee el archivo línea por línea
             std::cout << linea << '\n'; // Imprime la línea leída
         }
         archivo.close(); // Cierra el archivo
-    } else {
+    }
+    else
+    {
         std::cout << "No se pudo abrir el archivo para lectura.\n";
     }
 
